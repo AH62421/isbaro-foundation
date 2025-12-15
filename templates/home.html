@@ -2,6 +2,10 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
+
+    <!-- ESSENTIEEL VOOR MOBIEL (VERPLICHT) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Home - Isbaro Foundation</title>
 
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
@@ -10,6 +14,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@600&family=Montserrat:wght@500&display=swap" rel="stylesheet">
 
     <style>
+        /* ========= GLOBAL FIXES (MOBIEL STABILITEIT) ========= */
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
         body {
             margin: 0;
             font-family: 'Roboto', sans-serif;
@@ -43,14 +53,14 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 120px 20px 160px;
+            padding: 140px 20px 160px; /* FIX voor fixed navbar */
             position: relative;
         }
 
-        /* GROTE LOGO */
+        /* LOGO (RESPONSIVE VEILIG) */
         .hero-circle {
-            width: 420px;
-            height: 420px;
+            width: min(420px, 80vw);
+            height: min(420px, 80vw);
             border-radius: 50%;
             object-fit: cover;
             border: 10px solid rgba(255,255,255,0.9);
@@ -70,16 +80,15 @@
             color: #3b2f1e;
         }
 
-        /* 🔧 SUBTITLE FIX */
         .hero-subtitle {
             margin-top: 16px;
             font-size: 20px;
             color: #5a4630;
-            max-width: 820px;              /* meer ruimte */
+            max-width: 820px;
             width: 100%;
             line-height: 1.6;
-            white-space: normal;           /* tekst mag afbreken */
-            overflow-wrap: break-word;     /* geen afkappen */
+            white-space: normal;
+            overflow-wrap: break-word;
         }
 
         /* GOLF */
@@ -87,6 +96,8 @@
             position: absolute;
             bottom: 0;
             width: 100%;
+            max-width: 100%;
+            display: block;
         }
 
         /* ================= MISSIE ================= */
@@ -155,11 +166,10 @@
             background: #e3882f;
         }
 
-        /* ================= RESPONSIVE ================= */
+        /* ================= MOBIEL ================= */
         @media (max-width: 768px) {
-            .hero-circle {
-                width: 280px;
-                height: 280px;
+            .hero {
+                padding: 120px 16px 120px;
             }
 
             .hero-title {
@@ -168,7 +178,6 @@
 
             .hero-subtitle {
                 font-size: 18px;
-                max-width: 100%;
             }
 
             .mission {
@@ -184,7 +193,7 @@
 <div class="w3-top">
     <div class="w3-bar w3-wide w3-padding w3-card">
         <a href="/" class="w3-bar-item w3-button">
-            <img src="/static/isbaro_background.jpg" class="navbar-logo">
+            <img src="/static/isbaro_background.jpg" class="navbar-logo" alt="Isbaro Foundation">
         </a>
 
         <div class="w3-right w3-hide-small">
