@@ -2,6 +2,10 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
+
+    <!-- VERPLICHT VOOR MOBIEL -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Projects – Isbaro Foundation</title>
 
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
@@ -10,6 +14,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@600&family=Montserrat:wght@500&display=swap" rel="stylesheet">
 
     <style>
+        /* ========= MOBIELE STABILITEIT (ESSENTIEEL) ========= */
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
         body {
             margin: 0;
             font-family: 'Roboto', sans-serif;
@@ -17,10 +27,12 @@
             color: #333;
         }
 
+        /* ================= NAVBAR ================= */
         .w3-bar {
             min-height: 72px;
             background-color: #ffffff;
         }
+
         .w3-bar-item {
             font-family: 'Montserrat', sans-serif;
             font-weight: bold;
@@ -48,7 +60,7 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 140px 20px 120px;
+            padding: 140px 20px 120px; /* FIX voor fixed navbar */
             position: relative;
         }
 
@@ -68,6 +80,8 @@
             position: absolute;
             bottom: 0;
             width: 100%;
+            max-width: 100%;
+            display: block;
         }
 
         /* ================= PROJECT BLOCKS ================= */
@@ -77,15 +91,15 @@
 
         .project {
             display: grid;
-            grid-template-columns: 120px 1fr;
+            grid-template-columns: min(120px, 30vw) 1fr;
             gap: 40px;
             margin-bottom: 100px;
             align-items: flex-start;
         }
 
         .project-icon {
-            width: 120px;
-            height: 120px;
+            width: min(120px, 30vw);
+            height: min(120px, 30vw);
             border-radius: 50%;
             background: #F39C4A;
             display: flex;
@@ -112,7 +126,7 @@
             font-size: 17px;
         }
 
-        /* ================= SECTION DIVIDER ================= */
+        /* ================= DIVIDER ================= */
         .divider {
             height: 80px;
             margin: 100px 0;
@@ -121,8 +135,24 @@
             opacity: 0.3;
         }
 
-        /* ================= RESPONSIVE ================= */
+        /* ================= MOBIEL ================= */
         @media (max-width: 768px) {
+            .hero {
+                padding: 120px 16px 100px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .projects {
+                padding: 80px 6%;
+            }
+
             .project {
                 grid-template-columns: 1fr;
                 text-align: center;
@@ -130,14 +160,15 @@
 
             .project-icon {
                 margin: 0 auto 30px;
+                font-size: 40px;
             }
 
             .project-content ul {
                 text-align: left;
             }
 
-            .hero h1 {
-                font-size: 32px;
+            .project-content h2 {
+                font-size: 28px;
             }
         }
     </style>
@@ -149,7 +180,7 @@
 <div class="w3-top">
     <div class="w3-bar w3-wide w3-padding w3-card">
         <a href="/" class="w3-bar-item w3-button logo-link">
-            <img src="/static/isbaro_background.jpg" class="navbar-logo">
+            <img src="/static/isbaro_background.jpg" class="navbar-logo" alt="Isbaro Foundation">
         </a>
 
         <div class="w3-right w3-hide-small">
