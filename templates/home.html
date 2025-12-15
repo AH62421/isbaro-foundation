@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
 
-    <!-- ESSENTIEEL VOOR MOBIEL -->
+    <!-- ESSENTIEEL VOOR MOBIEL (VERPLICHT) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Home - Isbaro Foundation</title>
@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@600&family=Montserrat:wght@500&display=swap" rel="stylesheet">
 
     <style>
+        /* ========= GLOBAL FIXES (MOBIEL STABILITEIT) ========= */
         html, body {
             max-width: 100%;
             overflow-x: hidden;
@@ -25,7 +26,7 @@
             background: #faf7f2;
         }
 
-        /* NAVBAR */
+        /* ================= NAVBAR ================= */
         .w3-bar {
             min-height: 72px;
             background-color: #ffffff;
@@ -43,7 +44,7 @@
             object-fit: cover;
         }
 
-        /* HERO */
+        /* ================= HERO ================= */
         .hero {
             min-height: 100vh;
             background: linear-gradient(135deg, #F39C4A, #F8D7A4);
@@ -52,10 +53,11 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 140px 20px 160px;
+            padding: 140px 20px 160px; /* FIX voor fixed navbar */
             position: relative;
         }
 
+        /* LOGO (RESPONSIVE VEILIG) */
         .hero-circle {
             width: min(420px, 80vw);
             height: min(420px, 80vw);
@@ -63,6 +65,12 @@
             object-fit: cover;
             border: 10px solid rgba(255,255,255,0.9);
             box-shadow: 0 25px 60px rgba(0,0,0,0.35);
+            animation: scaleIn 1.2s ease;
+        }
+
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.85); }
+            to { opacity: 1; transform: scale(1); }
         }
 
         .hero-title {
@@ -77,28 +85,101 @@
             font-size: 20px;
             color: #5a4630;
             max-width: 820px;
+            width: 100%;
             line-height: 1.6;
+            white-space: normal;
+            overflow-wrap: break-word;
         }
 
+        /* GOLF */
         .hero svg {
             position: absolute;
             bottom: 0;
             width: 100%;
+            max-width: 100%;
+            display: block;
         }
 
+        /* ================= MISSIE ================= */
         .mission {
             margin-top: -80px;
             padding: 100px 10% 120px;
             text-align: center;
         }
 
+        .mission h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .mission-intro {
+            font-size: 19px;
+            max-width: 760px;
+            margin: 0 auto 60px;
+            color: #555;
+        }
+
+        .mission-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+        }
+
+        .mission-card {
+            background: white;
+            border-radius: 22px;
+            padding: 40px 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+            transition: transform 0.3s ease;
+        }
+
+        .mission-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .mission-card h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #F39C4A;
+        }
+
+        .mission-card p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .mission-btn {
+            display: inline-block;
+            margin-top: 60px;
+            padding: 16px 40px;
+            background: #F39C4A;
+            color: white;
+            border-radius: 40px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .mission-btn:hover {
+            background: #e3882f;
+        }
+
+        /* ================= MOBIEL ================= */
         @media (max-width: 768px) {
+            .hero {
+                padding: 120px 16px 120px;
+            }
+
             .hero-title {
                 font-size: 32px;
             }
+
             .hero-subtitle {
                 font-size: 18px;
             }
+
             .mission {
                 padding: 80px 6% 100px;
             }
@@ -110,31 +191,17 @@
 
 <!-- ================= NAVBAR ================= -->
 <div class="w3-top">
-    <div class="w3-bar w3-white w3-card w3-padding">
-        <!-- Logo -->
+    <div class="w3-bar w3-wide w3-padding w3-card">
         <a href="/" class="w3-bar-item w3-button">
             <img src="/static/isbaro_background.jpg" class="navbar-logo" alt="Isbaro Foundation">
         </a>
 
-        <!-- Hamburger (mobiel) -->
-        <button class="w3-bar-item w3-button w3-right w3-hide-medium w3-hide-large"
-                onclick="toggleMenu()">☰</button>
-
-        <!-- Desktop menu -->
         <div class="w3-right w3-hide-small">
             <a href="/" class="w3-bar-item w3-button">Home</a>
             <a href="/projects" class="w3-bar-item w3-button">Projects</a>
             <a href="/about" class="w3-bar-item w3-button">About</a>
             <a href="/contact" class="w3-bar-item w3-button">Contact</a>
         </div>
-    </div>
-
-    <!-- Mobiel menu -->
-    <div id="mobileMenu" class="w3-bar-block w3-white w3-hide w3-hide-medium w3-hide-large">
-        <a href="/" class="w3-bar-item w3-button">Home</a>
-        <a href="/projects" class="w3-bar-item w3-button">Projects</a>
-        <a href="/about" class="w3-bar-item w3-button">About</a>
-        <a href="/contact" class="w3-bar-item w3-button">Contact</a>
     </div>
 </div>
 
@@ -154,12 +221,31 @@
     </svg>
 </section>
 
-<!-- ================= SCRIPT ================= -->
-<script>
-function toggleMenu() {
-    document.getElementById("mobileMenu").classList.toggle("w3-hide");
-}
-</script>
+<!-- ================= MISSIE ================= -->
+<section class="mission">
+    <h2>Onze Missie</h2>
+    <p class="mission-intro">
+        Isbaro Foundation brengt mensen samen en versterkt culturele verbondenheid
+        tussen Afrika en Europa.
+    </p>
+
+    <div class="mission-grid">
+        <div class="mission-card">
+            <h3>Cultuur</h3>
+            <p>We vieren culturele diversiteit door kunst en erfgoed.</p>
+        </div>
+        <div class="mission-card">
+            <h3>Educatie</h3>
+            <p>We creëren kansen voor leren en persoonlijke groei.</p>
+        </div>
+        <div class="mission-card">
+            <h3>Verbinden</h3>
+            <p>We bouwen bruggen tussen mensen en gemeenschappen.</p>
+        </div>
+    </div>
+
+    <a href="/about" class="mission-btn">Ontdek onze visie</a>
+</section>
 
 </body>
 </html>
