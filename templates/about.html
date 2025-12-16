@@ -8,10 +8,8 @@
 
     <title>About – Isbaro Foundation</title>
 
-    <!-- FAVICON -->
     <link rel="icon" type="image/jpg" href="/static/isbaro_background.jpg">
 
-    <!-- STYLES -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,12 +20,12 @@
         html, body {
             width: 100%;
             overflow-x: hidden;
-            overflow-y: auto; 
+            overflow-y: auto;
         }
-
 
         body {
             margin: 0;
+            padding-top: 72px; /* ✅ ruimte voor vaste navbar */
             font-family: 'Roboto', sans-serif;
             background: #faf7f2;
             color: #333;
@@ -142,7 +140,10 @@
         /* ================= MOBIEL ================= */
         @media (max-width: 768px) {
 
-            /* NAVBAR COMPACT OP MOBIEL */
+            body {
+                padding-top: 64px;
+            }
+
             .w3-bar {
                 padding: 8px 6px !important;
             }
@@ -203,7 +204,6 @@
             <img src="/static/isbaro_background.jpg" class="navbar-logo" alt="Isbaro Foundation">
         </a>
 
-        <!-- GEEN w3-hide-small → altijd zichtbaar -->
         <div class="w3-right">
             <a href="/" class="w3-bar-item w3-button">Home</a>
             <a href="/projects" class="w3-bar-item w3-button">Projects</a>
