@@ -8,15 +8,17 @@
 
     <title>About – Isbaro Foundation</title>
 
+    <!-- FAVICON -->
     <link rel="icon" type="image/jpg" href="/static/isbaro_background.jpg">
 
+    <!-- STYLES -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@600&family=Montserrat:wght@500&display=swap" rel="stylesheet">
 
     <style>
-        /* ========= MOBIELE STABILITEIT (ESSENTIEEL) ========= */
+        /* ========= GLOBAL FIX ========= */
         html, body {
             max-width: 100%;
             overflow-x: hidden;
@@ -40,12 +42,6 @@
             font-weight: bold;
         }
 
-        .logo-link {
-            display: flex;
-            align-items: center;
-            padding: 6px 16px;
-        }
-
         .navbar-logo {
             height: 46px;
             width: 46px;
@@ -62,7 +58,7 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 140px 20px 120px; /* FIX voor fixed navbar */
+            padding: 140px 20px 120px;
             position: relative;
         }
 
@@ -82,7 +78,6 @@
             position: absolute;
             bottom: 0;
             width: 100%;
-            max-width: 100%;
             display: block;
         }
 
@@ -144,6 +139,22 @@
 
         /* ================= MOBIEL ================= */
         @media (max-width: 768px) {
+
+            /* NAVBAR COMPACT OP MOBIEL */
+            .w3-bar {
+                padding: 8px 6px !important;
+            }
+
+            .w3-bar-item {
+                padding: 8px 8px !important;
+                font-size: 14px;
+            }
+
+            .navbar-logo {
+                height: 38px;
+                width: 38px;
+            }
+
             .hero {
                 padding: 120px 16px 100px;
             }
@@ -185,12 +196,13 @@
 
 <!-- ================= NAVBAR ================= -->
 <div class="w3-top">
-    <div class="w3-bar w3-wide w3-padding w3-card">
-        <a href="/" class="w3-bar-item w3-button logo-link">
+    <div class="w3-bar w3-wide w3-card">
+        <a href="/" class="w3-bar-item w3-button">
             <img src="/static/isbaro_background.jpg" class="navbar-logo" alt="Isbaro Foundation">
         </a>
 
-        <div class="w3-right w3-hide-small">
+        <!-- GEEN w3-hide-small → altijd zichtbaar -->
+        <div class="w3-right">
             <a href="/" class="w3-bar-item w3-button">Home</a>
             <a href="/projects" class="w3-bar-item w3-button">Projects</a>
             <a href="/about" class="w3-bar-item w3-button">About</a>
@@ -214,7 +226,7 @@
     </svg>
 </section>
 
-<!-- ================= ABOUT CONTENT ================= -->
+<!-- ================= CONTENT ================= -->
 <section class="about">
 
     <div class="section">
@@ -222,47 +234,8 @@
         <div class="text">
             <h2>Wat betekent Isbaro?</h2>
             <p>
-                Het Somalische woord <b>Isbaro</b> betekent “leren” of “onderwijs”.
-                Het is afgeleid van het werkwoord <i>baro</i> (leren), met het voorvoegsel <i>is-</i>
-                dat wederzijdse handelingen aanduidt: samen leren en kennis delen.
-            </p>
-            <p>
-                In het Grieks betekent Isbaro “gelijke druk”, samengesteld uit <i>iso</i> (gelijk)
-                en <i>baros</i> (druk). In de meteorologie verwijst een isobaar naar een lijn
-                die punten met gelijke druk verbindt.
-            </p>
-            <p>
-                Hoewel deze betekenissen verschillen, delen zij hetzelfde onderliggende concept:
-                verbinding, balans en samenhang – waarden die centraal staan binnen Isbaro Foundation.
-            </p>
-        </div>
-    </div>
-
-    <div class="divider"></div>
-
-    <div class="section">
-        <div class="icon">🌱</div>
-        <div class="text">
-            <h2>Het belang van kennis van eigen roots</h2>
-
-            <h3>Persoonlijk perspectief</h3>
-            <p>
-                Het kennen en begrijpen van de eigen roots is essentieel voor identiteitsvorming.
-                Voor mensen met Afrikaanse wortels in Nederland vormt dit een brug naar het verleden
-                en een basis voor groei in het heden en de toekomst.
-            </p>
-
-            <h3>Psychologisch perspectief</h3>
-            <p>
-                Kennis van afkomst draagt bij aan een positief zelfbeeld, veerkracht
-                en een gevoel van verbondenheid, vooral bij mensen met psychische
-                of fysieke uitdagingen.
-            </p>
-
-            <h3>Educatief perspectief</h3>
-            <p>
-                Onderwijs over Afrikaanse geschiedenis, kunst, muziek, taal en tradities
-                verrijkt kennis en bevordert intercultureel begrip en respect.
+                Het Somalische woord <b>Isbaro</b> betekent “leren”.
+                Het staat voor samen kennis delen en groeien.
             </p>
         </div>
     </div>
@@ -272,25 +245,10 @@
     <div class="section">
         <div class="icon">🎯</div>
         <div class="text">
-            <h2>Missie en Visie</h2>
-
-            <h3>Missie</h3>
+            <h2>Missie & Visie</h2>
             <p>
-                Stichting Isbaro Foundation wil de Afrikaanse cultuur in Nederland zichtbaar,
-                tastbaar en toegankelijk maken, en bijdragen aan persoonlijke ontwikkeling,
-                interculturele verbinding en maatschappelijke inclusie – met bijzondere aandacht
-                voor mensen met psychische of fysieke beperkingen, chronische ziekten of dementie.
-                Daarnaast biedt de stichting dagbesteding: een veilige en stimulerende omgeving
-                die structuur, sociale contacten en een zinvolle daginvulling bevordert.
-            </p>
-
-            <h3>Visie</h3>
-            <p>
-                Cultuur en educatie zijn krachtige middelen om mensen te verbinden. Door Afrikaanse
-                tradities, waarden en kunstvormen te delen, versterken wij de positie van Afrikaanse
-                Nederlanders, bouwen we bruggen tussen Europese en Afrikaanse samenlevingen en
-                bevorderen wederzijds begrip en respect. Met het dagbestedingsaanbod dragen we
-                bovendien bij aan het welzijn van kwetsbare groepen en ontlasten mantelzorgers.
+                Wij versterken culturele verbinding, educatie en welzijn,
+                met speciale aandacht voor kwetsbare groepen.
             </p>
         </div>
     </div>
