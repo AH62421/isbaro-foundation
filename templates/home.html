@@ -17,15 +17,15 @@
 
     <style>
         /* ========= GLOBAL FIXES ========= */
-          html, body {
-              width: 100%;
-              overflow-x: hidden;
-              overflow-y: auto; 
+        html, body {
+            width: 100%;
+            overflow-x: hidden;
+            overflow-y: auto;
         }
-
 
         body {
             margin: 0;
+            padding-top: 72px; /* ruimte voor vaste navbar */
             font-family: 'Roboto', sans-serif;
             background: #faf7f2;
         }
@@ -95,13 +95,14 @@
         /* ================= MISSIE ================= */
         .mission {
             margin-top: -80px;
-            padding: 100px 10% 120px;
+            padding: 120px 10% 140px;
             text-align: center;
         }
 
         .mission h2 {
             font-family: 'Playfair Display', serif;
             font-size: 40px;
+            margin-bottom: 60px;
         }
 
         .mission-grid {
@@ -120,7 +121,10 @@
         /* ================= MOBIEL ================= */
         @media (max-width: 768px) {
 
-            /* HERO */
+            body {
+                padding-top: 64px;
+            }
+
             .hero {
                 padding: 120px 16px 120px;
             }
@@ -133,7 +137,6 @@
                 font-size: 18px;
             }
 
-            /* 👉 NAVBAR FIX OP MOBIEL 👇 */
             .w3-bar {
                 padding: 4px 6px !important;
             }
@@ -183,6 +186,36 @@
         <path fill="#faf7f2"
               d="M0,0 C720,120 720,0 1440,100 L1440,0 L0,0"></path>
     </svg>
+</section>
+
+<!-- ================= MISSIE ================= -->
+<section class="mission">
+    <h2>Onze Missie</h2>
+
+    <div class="mission-grid">
+        <div class="mission-card">
+            <h3>Educatie</h3>
+            <p>
+                Wij ondersteunen onderwijsinitiatieven die kansen creëren
+                voor kinderen en jongeren.
+            </p>
+        </div>
+
+        <div class="mission-card">
+            <h3>Cultuur</h3>
+            <p>
+                Verbinding tussen culturen door respect, samenwerking
+                en gedeelde waarden.
+            </p>
+        </div>
+
+        <div class="mission-card">
+            <h3>Gemeenschap</h3>
+            <p>
+                Versterken van lokale gemeenschappen door duurzame projecten.
+            </p>
+        </div>
+    </div>
 </section>
 
 </body>
