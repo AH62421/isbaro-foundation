@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@600&family=Montserrat:wght@500&display=swap" rel="stylesheet">
 
     <style>
-        /* ========= MOBIELE STABILITEIT ========= */
+        /* ========= GLOBAL FIX ========= */
         html, body {
             max-width: 100%;
             overflow-x: hidden;
@@ -62,14 +62,13 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 140px 20px 120px; /* FIX voor fixed navbar */
+            padding: 140px 20px 120px;
             position: relative;
         }
 
         .hero h1 {
             font-family: 'Playfair Display', serif;
             font-size: 44px;
-            margin-bottom: 20px;
         }
 
         .hero p {
@@ -82,11 +81,10 @@
             position: absolute;
             bottom: 0;
             width: 100%;
-            max-width: 100%;
             display: block;
         }
 
-        /* ================= CONTACT CONTENT ================= */
+        /* ================= CONTACT ================= */
         .contact {
             padding: 120px 8%;
             max-width: 900px;
@@ -116,8 +114,8 @@
         }
 
         .info-icon {
-            width: min(56px, 20vw);
-            height: min(56px, 20vw);
+            width: 56px;
+            height: 56px;
             border-radius: 50%;
             background: #F39C4A;
             color: white;
@@ -141,6 +139,23 @@
 
         /* ================= MOBIEL ================= */
         @media (max-width: 768px) {
+
+            /* NAVBAR FIX */
+            .w3-bar {
+                padding: 4px 6px !important;
+            }
+
+            .navbar-logo {
+                width: 36px;
+                height: 36px;
+            }
+
+            .w3-bar-item {
+                padding: 6px 8px !important;
+                font-size: 14px;
+            }
+
+            /* CONTENT */
             .hero {
                 padding: 120px 16px 100px;
             }
@@ -182,7 +197,8 @@
             <img src="/static/isbaro_background.jpg" class="navbar-logo" alt="Isbaro Foundation">
         </a>
 
-        <div class="w3-right w3-hide-small">
+        <!-- ❗️GEEN w3-hide-small -->
+        <div class="w3-right">
             <a href="/" class="w3-bar-item w3-button">Home</a>
             <a href="/projects" class="w3-bar-item w3-button">Projects</a>
             <a href="/about" class="w3-bar-item w3-button">About</a>
