@@ -20,12 +20,12 @@
         html, body {
             width: 100%;
             overflow-x: hidden;
-            overflow-y: auto; 
+            overflow-y: auto;
         }
-
 
         body {
             margin: 0;
+            padding-top: 72px; /* ✅ ruimte voor vaste navbar */
             font-family: 'Roboto', sans-serif;
             background: #faf7f2;
             color: #333;
@@ -142,7 +142,10 @@
         /* ================= MOBIEL ================= */
         @media (max-width: 768px) {
 
-            /* NAVBAR FIX */
+            body {
+                padding-top: 64px;
+            }
+
             .w3-bar {
                 padding: 4px 6px !important;
             }
@@ -157,7 +160,6 @@
                 font-size: 14px;
             }
 
-            /* CONTENT */
             .hero {
                 padding: 120px 16px 100px;
             }
@@ -199,7 +201,6 @@
             <img src="/static/isbaro_background.jpg" class="navbar-logo" alt="Isbaro Foundation">
         </a>
 
-        <!-- ❗️GEEN w3-hide-small -->
         <div class="w3-right">
             <a href="/" class="w3-bar-item w3-button">Home</a>
             <a href="/projects" class="w3-bar-item w3-button">Projects</a>
