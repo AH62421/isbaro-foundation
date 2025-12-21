@@ -2,13 +2,7 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
-
-    <!-- VERPLICHT VOOR MOBIEL -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Contact – Isbaro Foundation</title>
-
-    <link rel="icon" type="image/jpg" href="/static/isbaro_background.jpg">
 
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,38 +10,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@600&family=Montserrat:wght@500&display=swap" rel="stylesheet">
 
     <style>
-        /* ========= GLOBAL FIX ========= */
-        html, body {
-            width: 100%;
-            overflow-x: hidden;
-            overflow-y: auto;
-        }
-
         body {
             margin: 0;
-            padding-top: 72px; /* ✅ ruimte voor vaste navbar */
             font-family: 'Roboto', sans-serif;
             background: #faf7f2;
             color: #333;
         }
 
-        /* ================= NAVBAR ================= */
+        /* NAVBAR */
         .w3-bar {
             min-height: 72px;
             background-color: #ffffff;
         }
-
         .w3-bar-item {
             font-family: 'Montserrat', sans-serif;
             font-weight: bold;
         }
-
         .logo-link {
             display: flex;
             align-items: center;
             padding: 6px 16px;
         }
-
         .navbar-logo {
             height: 46px;
             width: 46px;
@@ -55,7 +38,7 @@
             object-fit: cover;
         }
 
-        /* ================= HERO ================= */
+        /* HERO */
         .hero {
             min-height: 60vh;
             background: linear-gradient(135deg, #F39C4A, #F8D7A4);
@@ -71,6 +54,7 @@
         .hero h1 {
             font-family: 'Playfair Display', serif;
             font-size: 44px;
+            margin-bottom: 20px;
         }
 
         .hero p {
@@ -83,10 +67,9 @@
             position: absolute;
             bottom: 0;
             width: 100%;
-            display: block;
         }
 
-        /* ================= CONTACT ================= */
+        /* CONTACT */
         .contact {
             padding: 120px 8%;
             max-width: 900px;
@@ -96,97 +79,74 @@
         .card {
             background: white;
             border-radius: 24px;
-            padding: 60px;
+            padding: 70px 60px;
             box-shadow: 0 25px 50px rgba(0,0,0,0.15);
             text-align: center;
         }
 
         .card h2 {
             font-family: 'Playfair Display', serif;
-            font-size: 32px;
-            margin-bottom: 30px;
+            font-size: 34px;
+            margin-bottom: 50px;
         }
 
-        .info-item {
+        /* SOCIALS – GROTER & SYMMETRISCH */
+        .social-links {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
-            font-size: 20px;
-            flex-wrap: wrap;
+            gap: 40px;
         }
 
-        .info-icon {
-            width: 56px;
-            height: 56px;
+        .social-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .social-icon {
+            width: 64px;
+            height: 64px;
             border-radius: 50%;
             background: #F39C4A;
-            color: white;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 24px;
-            margin-right: 16px;
+            margin-bottom: 14px;
         }
 
-        a.email-link {
+        .social-icon img {
+            width: 32px;
+            height: 32px;
+        }
+
+        .social-link {
+            display: inline-block;
+            font-size: 22px;              /* 🔥 GROTERE LINK */
+            padding: 8px 16px;            /* 🔥 GROTER KLIKVLAK */
             color: #333;
             font-weight: bold;
             text-decoration: none;
-            word-break: break-word;
+            font-family: 'Roboto', sans-serif;
+            border-radius: 8px;
         }
 
-        a.email-link:hover {
+        .social-link:hover {
             text-decoration: underline;
+            background: rgba(243, 156, 74, 0.12);
         }
 
-        /* ================= MOBIEL ================= */
+        /* RESPONSIVE */
         @media (max-width: 768px) {
-
-            body {
-                padding-top: 64px;
-            }
-
-            .w3-bar {
-                padding: 4px 6px !important;
-            }
-
-            .navbar-logo {
-                width: 36px;
-                height: 36px;
-            }
-
-            .w3-bar-item {
-                padding: 6px 8px !important;
-                font-size: 14px;
-            }
-
-            .hero {
-                padding: 120px 16px 100px;
-            }
-
             .hero h1 {
                 font-size: 32px;
             }
-
-            .hero p {
-                font-size: 18px;
-            }
-
-            .contact {
-                padding: 80px 6%;
-            }
-
             .card {
-                padding: 40px 24px;
+                padding: 45px 30px;
             }
-
-            .info-item {
-                flex-direction: column;
-                gap: 16px;
-            }
-
-            .info-icon {
-                margin-right: 0;
+            .social-link {
+                font-size: 20px;
             }
         }
     </style>
@@ -194,14 +154,13 @@
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
 <div class="w3-top">
     <div class="w3-bar w3-wide w3-padding w3-card">
         <a href="/" class="w3-bar-item w3-button logo-link">
-            <img src="/static/isbaro_background.jpg" class="navbar-logo" alt="Isbaro Foundation">
+            <img src="/static/isbaro_background.jpg" class="navbar-logo">
         </a>
 
-        <div class="w3-right">
+        <div class="w3-right w3-hide-small">
             <a href="/" class="w3-bar-item w3-button">Home</a>
             <a href="/projects" class="w3-bar-item w3-button">Projects</a>
             <a href="/about" class="w3-bar-item w3-button">About</a>
@@ -210,12 +169,12 @@
     </div>
 </div>
 
-<!-- ================= HERO ================= -->
+<!-- HERO -->
 <section class="hero">
     <h1>Contact</h1>
     <p>
         Voor vragen, samenwerkingen of initiatieven
-        kunt u contact met ons opnemen via e-mail.
+        kunt u contact met ons opnemen.
     </p>
 
     <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
@@ -224,18 +183,42 @@
     </svg>
 </section>
 
-<!-- ================= CONTACT ================= -->
 <section class="contact">
     <div class="card">
         <h2>Neem contact met ons op</h2>
 
-        <div class="info-item">
-            <div class="info-icon">✉️</div>
-            <div>
-                <a href="mailto:isbarofoundation@outlook.com" class="email-link">
+        <div class="social-links">
+
+            <div class="social-item">
+                <div class="social-icon">✉️</div>
+                <a href="mailto:isbarofoundation@outlook.com"
+                   class="social-link">
                     isbarofoundation@outlook.com
                 </a>
             </div>
+
+            <div class="social-item">
+                <div class="social-icon">
+                    <img src="/static/tiktok.png" alt="TikTok">
+                </div>
+                <a href="https://www.tiktok.com/@isbarofoundation"
+                   class="social-link"
+                   target="_blank">
+                    tiktok.com/@isbarofoundation
+                </a>
+            </div>
+
+            <div class="social-item">
+                <div class="social-icon">
+                    <img src="/static/instagram.png" alt="Instagram">
+                </div>
+                <a href="https://www.instagram.com/isbarofoundation"
+                   class="social-link"
+                   target="_blank">
+                    instagram.com/isbarofoundation
+                </a>
+            </div>
+
         </div>
     </div>
 </section>
