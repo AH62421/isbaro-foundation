@@ -15,8 +15,8 @@ class Vrijwilliger(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     naam = db.Column(db.String(100), nullable=False)
     email = db.Column(db.String(120), nullable=False)
-    telefoon = db.Column(db.String(50), nullable=True)
-    motivatie = db.Column(db.Text, nullable=True)
+    telefoon = db.Column(db.String(50))
+    motivatie = db.Column(db.Text)
 
 
 # Maak tabel automatisch
@@ -52,20 +52,53 @@ def vrijwilligers():
         telefoon = request.form.get("telefoon", "").strip()
         motivatie = request.form.get("motivatie", "").strip()
 
-        if naam and email:
-            nieuwe_vrijwilliger = Vrijwilliger(
-                naam=naam,
-                email=email,
-                telefoon=telefoon,
-                motivatie=motivatie
-            )
+        print("POST ontvangen")
+        print("Naam:", naam)
+        print("Email:", email)
+        print("Telefoon:", telefoon)
+        print("Motivatie:", motivatie)
 
-            db.session.add(nieuwe_vrijwilliger)
-            db.session.commit()
+        try:
+            if naam and email:
+                nieuwe_vrijwilliger = Vrijwilliger(
+                    naam=naam,
+                    email=email,
+                    telefoon=telefoon,
+                    motivatie=motivatie
+                )
+
+                db.session.add(nieuwe_vrijwilliger)
+                db.session.commit()
+
+                print("OPGESLAGEN IN DATABASE")
+
+        except Exception as e:
+            db.session.rollback()
+            print("DATABASE FOUT:", e)
 
         return redirect(url_for("vrijwilligers"))
 
     return render_template("vrijwilligers.html")
+
+
+# Test route om database te controleren
+@app.route("/test-insert")
+def test_insert():
+    try:
+        test = Vrijwilliger(
+            naam="Test Naam",
+            email="test@test.nl",
+            telefoon="0612345678",
+            motivatie="Test motivatie"
+        )
+
+        db.session.add(test)
+        db.session.commit()
+
+        return "Test opgeslagen in database!"
+    except Exception as e:
+        db.session.rollback()
+        return f"Database fout: {e}"
 
 
 if __name__ == "__main__":
