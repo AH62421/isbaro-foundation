@@ -1,41 +1,236 @@
-<div class="social-links">
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact – Isbaro Foundation</title>
 
-    <div class="social-item">
-        <div class="social-icon">✉️</div>
-        <a href="mailto:isbarofoundation@outlook.com"
-           class="social-link">
-            isbarofoundation@outlook.com
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@600&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: #faf7f2;
+            color: #333;
+        }
+
+        /* NAVBAR */
+        .w3-bar {
+            min-height: 72px;
+            background-color: #ffffff;
+        }
+        .w3-bar-item {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
+        }
+        .logo-link {
+            display: flex;
+            align-items: center;
+            padding: 6px 16px;
+        }
+        .navbar-logo {
+            height: 46px;
+            width: 46px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 60vh;
+            background: #F39C4A;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 140px 20px 120px;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 44px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 800px;
+            line-height: 1.6;
+        }
+
+        .hero svg {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* CONTACT */
+        .contact {
+            padding: 120px 8%;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: white;
+            border-radius: 24px;
+            padding: 70px 60px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+
+        .card h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 34px;
+            margin-bottom: 50px;
+        }
+
+        /* SOCIALS */
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .social-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .social-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: #F39C4A;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 14px;
+            font-size: 26px;
+        }
+
+        .social-icon img {
+            width: 32px;
+            height: 32px;
+        }
+
+        .social-link {
+            display: inline-block;
+            font-size: 22px;
+            padding: 8px 16px;
+            color: #333;
+            font-weight: bold;
+            text-decoration: none;
+            font-family: 'Roboto', sans-serif;
+            border-radius: 8px;
+        }
+
+        .social-link:hover {
+            text-decoration: underline;
+            background: rgba(243, 156, 74, 0.12);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            .card {
+                padding: 45px 30px;
+            }
+            .social-link {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="w3-top">
+    <div class="w3-bar w3-wide w3-padding w3-card">
+        <a href="/" class="w3-bar-item w3-button logo-link">
+            <img src="/static/isbaro_background.jpg" class="navbar-logo">
         </a>
-    </div>
 
-    <div class="social-item">
-        <div class="social-icon">
-            <img src="/static/tiktok.png" alt="TikTok">
+        <div class="w3-right w3-hide-small">
+            <a href="/" class="w3-bar-item w3-button">Home</a>
+            <a href="/projects" class="w3-bar-item w3-button">Projects</a>
+            <a href="/about" class="w3-bar-item w3-button">About</a>
+            <a href="/contact" class="w3-bar-item w3-button">Contact</a>
         </div>
-        <a href="https://www.tiktok.com/@isbarofoundation"
-           class="social-link"
-           target="_blank">
-            tiktok.com/@isbarofoundation
-        </a>
     </div>
-
-    <div class="social-item">
-        <div class="social-icon">
-            <img src="/static/instagram.png" alt="Instagram">
-        </div>
-        <a href="https://www.instagram.com/isbarofoundation"
-           class="social-link"
-           target="_blank">
-            instagram.com/isbarofoundation
-        </a>
-    </div>
-
-    <!-- NIEUW -->
-    <div class="social-item">
-        <div class="social-icon">🤝</div>
-        <a href="/vrijwilligers" class="social-link">
-            Vrijwilliger worden
-        </a>
-    </div>
-
 </div>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>Contact</h1>
+    <p>
+        Voor vragen, samenwerkingen of initiatieven
+        kunt u contact met ons opnemen.
+    </p>
+
+    <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+        <path fill="#faf7f2"
+              d="M0,0 C720,120 720,0 1440,100 L1440,0 L0,0"></path>
+    </svg>
+</section>
+
+<section class="contact">
+    <div class="card">
+        <h2>Neem contact met ons op</h2>
+
+        <div class="social-links">
+
+            <div class="social-item">
+                <div class="social-icon">✉️</div>
+                <a href="mailto:isbarofoundation@outlook.com"
+                   class="social-link">
+                    isbarofoundation@outlook.com
+                </a>
+            </div>
+
+            <div class="social-item">
+                <div class="social-icon">
+                    <img src="/static/tiktok.png" alt="TikTok">
+                </div>
+                <a href="https://www.tiktok.com/@isbarofoundation"
+                   class="social-link"
+                   target="_blank">
+                    tiktok.com/@isbarofoundation
+                </a>
+            </div>
+
+            <div class="social-item">
+                <div class="social-icon">
+                    <img src="/static/instagram.png" alt="Instagram">
+                </div>
+                <a href="https://www.instagram.com/isbarofoundation"
+                   class="social-link"
+                   target="_blank">
+                    instagram.com/isbarofoundation
+                </a>
+            </div>
+
+            <!-- NIEUWE TOEVOEGING -->
+            <div class="social-item">
+                <div class="social-icon">🤝</div>
+                <a href="/vrijwilligers" class="social-link">
+                    Vrijwilliger worden
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
