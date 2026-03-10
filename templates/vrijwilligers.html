@@ -126,25 +126,6 @@
             min-height: 180px;
         }
 
-        .checkbox-group {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            margin-top: 20px;
-            margin-bottom: 25px;
-        }
-
-        .checkbox-group input {
-            width: auto;
-            margin-top: 4px;
-        }
-
-        .checkbox-group label {
-            margin: 0;
-            font-weight: normal;
-            line-height: 1.5;
-        }
-
         button {
             background: #F39C4A;
             border: none;
@@ -256,11 +237,11 @@
         <h2>Aanmelden als vrijwilliger</h2>
 
         <form method="POST" action="{{ url_for('vrijwilligers') }}">
-            <label for="voornaam">Voornaam</label>
-            <input type="text" id="voornaam" name="voornaam" required>
+            <label for="naam">Naam</label>
+            <input type="text" id="naam" name="naam" required>
 
-            <label for="achternaam">Achternaam</label>
-            <input type="text" id="achternaam" name="achternaam" required>
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required>
 
             <label for="telefoon">Telefoonnummer</label>
             <input type="tel" id="telefoon" name="telefoon" required>
@@ -275,4 +256,4 @@
 </div>
 
 </body>
-</html>  
+</html>
