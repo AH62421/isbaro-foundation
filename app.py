@@ -59,18 +59,17 @@ def vrijwilligers():
         print("Motivatie:", motivatie)
 
         try:
-            if naam and email:
-                nieuwe_vrijwilliger = Vrijwilliger(
-                    naam=naam,
-                    email=email,
-                    telefoon=telefoon,
-                    motivatie=motivatie
-                )
+            nieuwe_vrijwilliger = Vrijwilliger(
+                naam=naam,
+                email=email,
+                telefoon=telefoon,
+                motivatie=motivatie
+            )
 
-                db.session.add(nieuwe_vrijwilliger)
-                db.session.commit()
+            db.session.add(nieuwe_vrijwilliger)
+            db.session.commit()
 
-                print("OPGESLAGEN IN DATABASE")
+            print("OPGESLAGEN IN DATABASE")
 
         except Exception as e:
             db.session.rollback()
