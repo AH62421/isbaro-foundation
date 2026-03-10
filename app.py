@@ -1,15 +1,16 @@
 from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
-import os
 
 app = Flask(__name__)
 
-app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DATABASE_URL")
+# Render Postgres database
+app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://vrijwilligers_aanmeldingen_user:YkMEUgISy42WVnotoVBfW04E73rIdJHF@dpg-d6o1lrua2pns73fsl1ag-a/vrijwilligers_aanmeldingen"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 db = SQLAlchemy(app)
 
 
+# Database tabel
 class Vrijwilliger(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     naam = db.Column(db.String(100), nullable=False)
@@ -18,6 +19,7 @@ class Vrijwilliger(db.Model):
     motivatie = db.Column(db.Text, nullable=True)
 
 
+# Maak tabel automatisch
 with app.app_context():
     db.create_all()
 
@@ -57,6 +59,7 @@ def vrijwilligers():
                 telefoon=telefoon,
                 motivatie=motivatie
             )
+
             db.session.add(nieuwe_vrijwilliger)
             db.session.commit()
 
