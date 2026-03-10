@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vrijwilliger worden – Isbaro Foundation</title>
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@600&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: #faf7f2;
+            color: #333;
+        }
+
+        .w3-bar {
+            min-height: 72px;
+            background-color: #ffffff;
+        }
+
+        .w3-bar-item {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
+        }
+
+        .logo-link {
+            display: flex;
+            align-items: center;
+            padding: 6px 16px;
+        }
+
+        .navbar-logo {
+            height: 46px;
+            width: 46px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .hero {
+            min-height: 50vh;
+            background: #F39C4A;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 140px 20px 100px;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 44px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 850px;
+            line-height: 1.6;
+        }
+
+        .hero svg {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 45px;
+            border-radius: 24px;
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+            margin-bottom: 40px;
+        }
+
+        .card h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 34px;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .card h3 {
+            margin-top: 28px;
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+
+        .card p {
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            margin-top: 18px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 14px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            font-family: 'Roboto', sans-serif;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 180px;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-top: 20px;
+            margin-bottom: 25px;
+        }
+
+        .checkbox-group input {
+            width: auto;
+            margin-top: 4px;
+        }
+
+        .checkbox-group label {
+            margin: 0;
+            font-weight: normal;
+            line-height: 1.5;
+        }
+
+        button {
+            background: #F39C4A;
+            border: none;
+            padding: 14px 24px;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .card {
+                padding: 30px 22px;
+            }
+
+            .card h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="w3-top">
+    <div class="w3-bar w3-wide w3-padding w3-card">
+        <a href="/" class="w3-bar-item w3-button logo-link">
+            <img src="/static/isbaro_background.jpg" class="navbar-logo" alt="Logo">
+        </a>
+
+        <div class="w3-right w3-hide-small">
+            <a href="/" class="w3-bar-item w3-button">Home</a>
+            <a href="/projects" class="w3-bar-item w3-button">Projects</a>
+            <a href="/about" class="w3-bar-item w3-button">About</a>
+            <a href="/contact" class="w3-bar-item w3-button">Contact</a>
+        </div>
+    </div>
+</div>
+
+<section class="hero">
+    <h1>Vrijwilliger worden</h1>
+    <p>
+        Wilt u zich inzetten voor Stichting Isbaro Foundation? Lees hieronder ons aannamebeleid
+        en vul daarna het aanmeldformulier in.
+    </p>
+
+    <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+        <path fill="#faf7f2" d="M0,0 C720,120 720,0 1440,100 L1440,0 L0,0"></path>
+    </svg>
+</section>
+
+<div class="container">
+
+    <div class="card">
+        <h2>Aannamebeleid Vrijwilligers</h2>
+
+        <p>
+            Stichting Isbaro Foundation hecht grote waarde aan de veiligheid en het welzijn van haar deelnemers.
+            Omdat onze vrijwilligers werken met kwetsbare doelgroepen, waaronder kinderen, ouderen en mensen met een beperking,
+            hanteren wij een zorgvuldige aannameprocedure. Dit beleid is opgesteld om een veilige omgeving te waarborgen.
+        </p>
+
+        <h3>1. Kennismakingsgesprek</h3>
+        <p>
+            Iedere potentiële vrijwilliger start met een persoonlijk kennismakingsgesprek. Tijdens dit gesprek bespreken we de motivatie,
+            de achtergrond van de vrijwilliger en de specifieke taken. Ook wordt getoetst of de kandidaat past bij de visie van de stichting.
+        </p>
+
+        <h3>2. Opvragen van referenties</h3>
+        <p>
+            Indien van toepassing vraagt de stichting, na toestemming van de kandidaat, referenties op bij eerdere
+            (vrijwilligers)organisaties waar de kandidaat actief is geweest.
+        </p>
+
+        <h3>3. Verklaring Omtrent het Gedrag (VOG)</h3>
+        <p>
+            Het overleggen van een geldige Verklaring Omtrent het Gedrag (VOG) is een verplicht onderdeel van de aanstelling
+            voor elke vrijwilliger. De aanvraag hiervan wordt door de stichting gefaciliteerd.
+        </p>
+
+        <h3>4. Ondertekening Gedragscode</h3>
+        <p>
+            Nieuwe vrijwilligers verklaren zich akkoord met onze gedragscode. Hierin staan duidelijke regels over de omgang
+            met de doelgroep, grensoverschrijdend gedrag en de geheimhouding van gevoelige informatie.
+        </p>
+
+        <h3>5. Inwerkperiode</h3>
+        <p>
+            Elke nieuwe vrijwilliger krijgt een inwerkperiode waarin hij of zij wordt begeleid door een ervaren medewerker
+            of coördinator. Zo wordt gewaarborgd dat de vrijwilliger de werkwijze van de stichting goed begrijpt voordat er
+            zelfstandig met kwetsbare groepen wordt gewerkt.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Aanmelden als vrijwilliger</h2>
+
+        <form method="POST" action="{{ url_for('vrijwilligers') }}">
+            <label for="voornaam">Voornaam</label>
+            <input type="text" id="voornaam" name="voornaam" required>
+
+            <label for="achternaam">Achternaam</label>
+            <input type="text" id="achternaam" name="achternaam" required>
+
+            <label for="telefoon">Telefoonnummer</label>
+            <input type="tel" id="telefoon" name="telefoon" required>
+
+            <label for="motivatie">Motivatiebrief</label>
+            <textarea id="motivatie" name="motivatie" rows="6" placeholder="Vertel waarom u vrijwilliger wilt worden..." required></textarea>
+
+            <button type="submit">Aanmelding versturen</button>
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>  
